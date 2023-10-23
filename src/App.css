@@ -1,3 +1,8 @@
+* {
+  background-color: rgb(126, 147, 229);
+  color: white;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +44,9 @@
 
 .read-the-docs {
   color: #888;
+}
+
+footer {
+  background-color: white;
+  color: black;
 }

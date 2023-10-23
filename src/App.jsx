@@ -1,21 +1,12 @@
 import "./App.css";
-import Profile from "./Profile";
+import HeaderTitle from "./header";
+import MyFooter from "./Footer";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        <h1>This is working!</h1>
-      </p>
-      <p>
-        <h1>This is working!</h1>
-      </p>
-      <p>
-        <h1>This is working!</h1>
-      </p>
-      <p>
-        <h1>This is working!</h1>
-      </p>
+      <HeaderTitle />
+      <MyFooter />
     </div>
   );
 }
