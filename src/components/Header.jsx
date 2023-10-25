@@ -1,11 +1,9 @@
-function headerTitle() {
+export default function Header() {
   return (
     <div className="title">
       <header>
-        <h1>The Horned Beast</h1>
+        <h1>The Horned Beasts</h1>
       </header>
     </div>
   );
 }
-
-export default headerTitle;

@@ -1,4 +1,4 @@
-function MyFooter() {
+export default function Footer() {
   return (
     <div className="footer">
       <footer>
@@ -7,5 +7,3 @@ function MyFooter() {
     </div>
   );
 }
-
-export default MyFooter;

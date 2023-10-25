@@ -1,12 +1,14 @@
 import "./App.css";
-import HeaderTitle from "./header";
-import MyFooter from "./Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
     <div className="App">
-      <HeaderTitle />
-      <MyFooter />
+      <Header />
+      <Footer />
+      <Gallery />
     </div>
   );
 }

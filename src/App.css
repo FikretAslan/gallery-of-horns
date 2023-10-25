@@ -50,3 +50,8 @@ footer {
   background-color: white;
   color: black;
 }
+
+img {
+  height: 300px;
+  width: auto;
+}
