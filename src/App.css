@@ -55,3 +55,8 @@ img {
   height: 300px;
   width: auto;
 }
+
+button {
+  color: black;
+  display: flex;
+}
