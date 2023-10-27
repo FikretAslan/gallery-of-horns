@@ -9,42 +9,34 @@ import SelectedBeast from "./components/SelectedBeast";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [shownBeast, setShownBeast] = useState({});
+  const [horns, setHorns] = useState("");
 
   function handleShowModal(beast) {
     setShowModal(!showModal);
     setShownBeast(beast);
   }
+  function handleFilter(event) {
+    setHorns(event.target.value);
+  }
   return (
     <div className="App">
       <Header />
-      <DropDown />
-      <Footer />
-      <Gallery BeastData={BeastData} handleShowModal={handleShowModal} />
+      <select onChange={handleFilter}>
+        <option value="">All</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <Gallery
+        BeastData={BeastData}
+        handleShowModal={handleShowModal}
+        horns={horns}
+      />
       {showModal && <SelectedBeast shownBeast={shownBeast} />}
+      <Footer />
     </div>
   );
-  function DropDown() {
-    const [hornChoice, setHornChoice] = useState(false);
-    return (
-      <div>
-        <button onClick={() => setHornChoice(!hornChoice)}>
-          Toggle Dropdown
-        </button>
-        {hornChoice && (
-          <form>
-            <label>
-              Filter by # of horns:
-              <select>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </label>
-          </form>
-        )}
-      </div>
-    );
-  }
 }
 
 export default App;
